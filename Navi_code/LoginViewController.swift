@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.backgroundColor = .black
         button.tintColor = .white
-        button.setTitle("Login", for: .normal)
+        button.setTitle("LOGIN", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
