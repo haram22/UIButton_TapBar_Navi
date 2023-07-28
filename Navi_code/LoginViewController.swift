@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,13 +42,13 @@ class ViewController: UIViewController {
         let vc2 = SecondViewController()
         let vc3 = ThirdViewControllerr()
         
-        vc1.title = "hi"
+        vc1.title = "First"
         vc2.title = "nice"
         vc3.title = "happy"
         
         tabBarVC.setViewControllers([vc1, vc2, vc3], animated: true)
         tabBarVC.modalPresentationStyle = .fullScreen
-        tabBarVC.tabBar.backgroundColor = .darkGray
+        tabBarVC.tabBar.backgroundColor = .lightGray
         
         // 아이템이 있으면 아이템을, 없으면 else문을 반환한다.
         guard let items = tabBarVC.tabBar.items else { return }
@@ -56,10 +56,9 @@ class ViewController: UIViewController {
         items[0].image = UIImage(systemName: "square.and.arrow.up")
         items[1].image = UIImage(systemName: "arrowshape.right")
         items[2].image = UIImage(systemName: "bookmark.circle.fill")
-        
-        
-        
+    
         present(tabBarVC, animated: true, completion: nil)
     }
 }
+
 

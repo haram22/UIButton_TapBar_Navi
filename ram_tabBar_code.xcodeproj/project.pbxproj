@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21B0C1C12A6D1E4D0070E3F4 /* Build configuration list for PBXProject "ram_Navi_code" */;
+			buildConfigurationList = 21B0C1C12A6D1E4D0070E3F4 /* Build configuration list for PBXProject "ram_tabBar_code" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21B0C1C12A6D1E4D0070E3F4 /* Build configuration list for PBXProject "ram_Navi_code" */ = {
+		21B0C1C12A6D1E4D0070E3F4 /* Build configuration list for PBXProject "ram_tabBar_code" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21B0C1D82A6D1E4E0070E3F4 /* Debug */,
