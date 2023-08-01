@@ -27,29 +27,29 @@ class FirstViewController: UIViewController{
     func makeUi() {
         view.backgroundColor = .systemYellow
         
+        // 네비게이션 바의 틴트 색상을 파란색으로 설정합니다.
+//        navigationController?.navigationBar.tintColor = .blue
+        
         let navigationBarAppearance = UINavigationBarAppearance()
         // UINavigationBarAppearance 객체를 생성하고 네비게이션 바의 불투명한 배경 설정을 준비합니다.
         navigationBarAppearance.configureWithOpaqueBackground()
-        
-        // 네비게이션 바의 기본 외관을 설정합니다.
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance
-        
-        // 스크롤 시 상단 가장자리에서 나타나는 외관을 설정합니다.
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
-        
-        // 네비게이션 바의 틴트 색상을 파란색으로 설정합니다.
-        navigationController?.navigationBar.tintColor = .blue
 
         // 각 뷰 컨트롤러의 네비게이션 바 외관을 설정합니다.
         navigationItem.scrollEdgeAppearance = navigationBarAppearance
+        
+        // scroll이 될 때 네비게이션 바의 색상을 brown으로 설정합니다.
+        navigationBarAppearance.backgroundColor = .brown
         navigationItem.standardAppearance = navigationBarAppearance
-        navigationItem.compactAppearance = navigationBarAppearance
+        
+        
+        // MARK: - 3. compactAppearance
+//        navigationItem.compactAppearance = navigationBarAppearance
+        
 
         // 네비게이션 컨트롤러의 상태 바 외관이 변경되었을 때, 상태 바를 새로고침(refresh)하도록 요청하는 메서드입니다. iOS 앱은 상태 바에 시간, 배터리 상태 등을 표시합니다. 네비게이션 컨트롤러의 상태 바 외관을 변경하거나 업데이트할 때, 시스템은 이 메서드를 호출하여 상태 바의 외관을 업데이트합니다.
         // 일반적으로, 네비게이션 바의 불투명성, 배경색, 이미지 등의 외관을 변경하려면 변경한 후에 setNeedsStatusBarAppearanceUpdate() 메서드를 호출하여 변경 사항이 상태 바에 반영되도록 합니다.
         navigationController?.setNeedsStatusBarAppearanceUpdate()
 
-        //
         navigationController?.navigationBar.isTranslucent = false
         
         title = "First"
@@ -80,7 +80,6 @@ class FirstViewController: UIViewController{
             contentView.trailingAnchor.constraint(equalTo: myScrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: myScrollView.bottomAnchor),
             contentView.widthAnchor.constraint(equalTo: myScrollView.widthAnchor),
-            contentView.heightAnchor.constraint(greaterThanOrEqualTo: myScrollView.heightAnchor)
         ])
 
         // MARK: - contentView에 추가할 content 생성 및 설정
